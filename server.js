@@ -17,7 +17,8 @@ app.get("/", function (req, res) {
 });
 
 app.get("/:time", function (req, res) {
-  res.end(req.params.time);
+  var result = new Date(req.params.time)
+  res.end(JSON.stringify({unixtime: result.toString()}));
 });
 
 
