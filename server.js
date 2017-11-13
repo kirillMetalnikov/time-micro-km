@@ -24,7 +24,7 @@ app.get("/:time", function (req, res) {
   }
   res.write(req.params.time + "\n")
   res.write(result + "\n")
-  res.end(JSON.stringify({natural: result ,unixtime: result.valueOf() / 1000}));
+  res.end(JSON.stringify({natural: result.toLocaleFormat("%B %e, %Y"), unixtime: result.valueOf() / 1000}));
 });
 
 
