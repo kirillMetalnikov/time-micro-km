@@ -4,6 +4,7 @@
 // init project
 var express = require('express');
 var app = express();
+var moment = require('moment');
 
 // we've started you off with Express, 
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
@@ -17,7 +18,8 @@ app.get("/", function (req, res) {
 });
 
 app.get("/:time", function (req, res) {
-  var result = new Date(req.params.time)
+  var result = new Date()
+  result = moment(req.params.time)
   res.write(req.params.time + "\n")
   res.write(result + "\n")
   res.end(JSON.stringify({unixtime: result.valueOf()}));
