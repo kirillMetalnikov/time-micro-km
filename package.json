@@ -11,7 +11,8 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "strftime": "*"
   },
   "engines": {
     "node": "8.x"
@@ -23,6 +24,7 @@
   "keywords": [
     "node",
     "glitch",
-    "express"
+    "express",
+    "strftime"
   ]
 }
